@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# cebrap.lab online -  Análise quantitativa de texto
+
+Para saber de próximos oferecimentos, entre em contato com <cebrap.lab@cebrap.org.br>
+
+
+## Informações gerais
+
+- **Ministrante:** [Beatriz Milz](https://beamilz.com/)
+
+- **Data/horário:** 27 de novembro a 1 de dezembro/2023;
+  - Segunda, Quarta e Sexta: aula ao vivo, online, das 19h00 às 22h00.
+  - Terça e quinta: haverão tarefas para casa, para praticar os conceitos.
+
+- **Inscrições:** <https://cursos.cebrap.org.br/>
+
+
+## Materiais
+
+### Slides
+
+Em breve :)
+
+
+### Scripts pós aula
+
+Em breve :)
+
+
+### Exercícios
+
+Em breve :)
+
+## Materiais para revisão do conteúdo básico
+
+- [Material do curso de Introdução ao R - 2023 (ministrado por Beatriz Milz)](https://beatrizmilz.github.io/2023-06-cebrap-lab-intro-R/)
+
+- [Material do curso de Visualização de dados - 2023 (ministrado por Beatriz Milz)](https://beatrizmilz.github.io/2023-06-cebrap-lab-viz/)
+
+
+
+
+- [Livro online, gratuito e em inglês: R for Data Science](https://r4ds.hadley.nz/) - A versão preliminar da tradução deste livro está disponível em: <https://cienciadedatos.github.io/pt-r4ds/> 
+
+- [Livro online e gratuito: Ciência de Dados em R](https://livro.curso-r.com/7-2-dplyr.html)
+
+
+
+## Materiais para ir além
+
+- Principal referência do curso: [Text Mining with R](https://www.tidytextmining.com/) - Julia Silge and David Robinson
+
+- Referência mais avançada: [Livro Supervised Machine Learning for Text Analysis in R](https://smltar.com/) - Emil Hvitfeldt and Julia Silge

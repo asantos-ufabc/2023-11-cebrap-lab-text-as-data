@@ -1,42 +1,57 @@
-# 2023-cebrap-text-as-data
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-Aula 1 - Introdução à análise de texto quantitativo com R e pré-processamento de texto
+# cebrap.lab online - Análise quantitativa de texto
 
-Mostrar o ciclo de ciência de dados, e mostrar como NLP se manifesta nestes tópicos e o que vamos tratar.
-Qual é o objetivo?
-Que tipo de análise quer fazer?
-Que tipo de análise NLP consegue resolver?
-O que será mostrado? NLP é muito amplo!
+Para saber de próximos oferecimentos, entre em contato com
+<cebrap.lab@cebrap.org.br>
 
-Técnicas para criar uma base estruturada (a partir de dados textuais)
+## Informações gerais
 
-  - O que é análise de texto quantitativo
-  - Importação de dados de texto para o R (diferentes formatos: PDF, word, HTML)
-  - Introdução ao stringr
+- **Ministrante:** [Beatriz Milz](https://beamilz.com/)
 
-Aula 2 - Tarefas relacionadas aos temas da aula anterior
+- **Data/horário:** 27 de novembro a 1 de dezembro/2023;
 
-Aula 3 - Limpeza de texto (tirar stop words; expressões regulares;); Descritiva/Visualização (Nuvem de palavras) 
+  - Segunda, Quarta e Sexta: aula ao vivo, online, das 19h00 às 22h00.
+  - Terça e quinta: haverão tarefas para casa, para praticar os
+    conceitos.
 
-Pré-processamento
-Ex: quais são os processos que falam sobre X.
+- **Inscrições:** <https://cursos.cebrap.org.br/>
 
-Aula 4 - Tarefas relacionadas aos temas da aula anterior
+## Materiais
 
-Aula 5 - Topic Modelling (Análise de Cluster com textos) + Case.
+### Slides
 
+Em breve :)
 
-ChatGPT?
+### Scripts pós aula
 
-## Exemplos
+Em breve :)
 
+### Exercícios
 
-- Trabalho do Jonas com dados do Twitter.
+Em breve :)
 
+## Materiais para revisão do conteúdo básico
 
-## Referências
+- [Material do curso de Introdução ao R - 2023 (ministrado por Beatriz
+  Milz)](https://beatrizmilz.github.io/2023-06-cebrap-lab-intro-R/)
 
-Principal referência: https://www.tidytextmining.com/
+- [Material do curso de Visualização de dados - 2023 (ministrado por
+  Beatriz Milz)](https://beatrizmilz.github.io/2023-06-cebrap-lab-viz/)
 
-Referências mais avançadas: https://smltar.com/
+- [Livro online, gratuito e em inglês: R for Data
+  Science](https://r4ds.hadley.nz/) - A versão preliminar da tradução
+  deste livro está disponível em:
+  <https://cienciadedatos.github.io/pt-r4ds/>
+
+- [Livro online e gratuito: Ciência de Dados em
+  R](https://livro.curso-r.com/7-2-dplyr.html)
+
+## Materiais para ir além
+
+- Principal referência do curso: [Text Mining with
+  R](https://www.tidytextmining.com/) - Julia Silge and David Robinson
+
+- Referência mais avançada: [Livro Supervised Machine Learning for Text
+  Analysis in R](https://smltar.com/) - Emil Hvitfeldt and Julia Silge
