@@ -1,4 +1,3 @@
-
 # 2023-cebrap-text-as-data
 
 
