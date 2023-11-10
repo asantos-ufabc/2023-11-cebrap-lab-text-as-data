@@ -22,7 +22,8 @@ Para saber de próximos oferecimentos, entre em contato com
 
 ### Slides
 
-Em breve :)
+- [Introdução ao
+  curso](https://beatrizmilz.github.io/2023-11-cebrap-lab-text-as-data/slides/introducao-ao-curso.html)
 
 ### Scripts pós aula
 
@@ -39,6 +40,9 @@ Em breve :)
 
 - [Material do curso de Visualização de dados - 2023 (ministrado por
   Beatriz Milz)](https://beatrizmilz.github.io/2023-06-cebrap-lab-viz/)
+
+- [Material da disciplina “Análise de Dados para as Ciências Sociais” -
+  tutoriais 1 até 6.](https://jonnyphillips.github.io/Ciencia_de_Dados/)
 
 - [Livro online, gratuito e em inglês: R for Data
   Science](https://r4ds.hadley.nz/) - A versão preliminar da tradução
