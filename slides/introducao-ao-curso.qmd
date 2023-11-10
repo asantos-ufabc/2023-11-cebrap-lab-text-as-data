@@ -34,20 +34,17 @@ date: 'Novembro de 2023'
 
 -   Instrutora de tidyverse certificada pela RStudio/Posit.
 
-
-
 ## Informações gerais
 
 -   **Data/horário:** 27 de novembro a 1 de dezembro/2023;
     -   Segunda, Quarta e Sexta: aula ao vivo, online, das 19h00 às 22h00.
     -   Terça e quinta: haverão tarefas para casa, para praticar os conceitos.
-    
-    
+
 ## Público alvo
 
-- Pessoas que tenham interesse em analisar textos com métodos quantitativos utilizando R;
+-   Pessoas que tenham interesse em analisar textos com métodos quantitativos utilizando R;
 
-- Tenham familiaridade fazendo as seguintes tarefas em R: importar bases de dados, filtrar linhas, selecionar colunas, agrupar a base, criar sumarizações, criar novas colunas, criar gráficos simples com ggplot2 (pacotes readr, dplyr e ggplot2 do tidyverse).
+-   Tenham familiaridade fazendo as seguintes tarefas em R: importar bases de dados, filtrar linhas, selecionar colunas, agrupar a base, criar sumarizações, criar novas colunas, criar gráficos simples com ggplot2 (pacotes readr, dplyr e ggplot2 do tidyverse).
 
 ## Pré-requisitos
 
@@ -62,11 +59,10 @@ date: 'Novembro de 2023'
 
 ```{r, eval=FALSE, echo = TRUE}
 install.packages(c(
-  "tidyverse"
+  "tidyverse",
+  "tidytext"
 ))
 ```
-
-
 
 ## Ciclo da Ciência de Dados
 
@@ -76,7 +72,6 @@ install.packages(c(
 Slide do curso de [Visualização de Dados](https://curso-r.github.io/main-visualizacao/slides/slides.html), da [Curso-R](https://curso-r.com), ministrado por mim e [Julio Trecenti](https://br.linkedin.com/in/jtrecenti).
 :::
 
-
 ## Fluxo de trabalho de análise de texto
 
 <img src="img/tmwr_0101.png" style="display: block; margin-left: auto; margin-right: auto;"/>
@@ -85,17 +80,14 @@ Slide do curso de [Visualização de Dados](https://curso-r.github.io/main-visua
 Imagem do livro [Text Mining with R](https://www.tidytextmining.com/tidytext#contrasting-tidy-text-with-other-data-structures).
 :::
 
-
 ## Plano das aulas
 
-- Introdução à análise de texto quantitativo com R 
+-   Introdução à análise de texto quantitativo com R
 
-- Pré-processamento de texto
+-   Pré-processamento de texto
 
-- Análise Descritiva / Visualização
+-   Análise Descritiva / Visualização
 
-- Análise de agrupamentos com textos
-
-
+-   Análise de agrupamentos com textos
 
 ## Vamos começar? {.middle .center}

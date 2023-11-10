@@ -25,6 +25,9 @@ Para saber de próximos oferecimentos, entre em contato com
 - [Introdução ao
   curso](https://beatrizmilz.github.io/2023-11-cebrap-lab-text-as-data/slides/introducao-ao-curso.html)
 
+- [Introdução: Análise quantitativa de
+  texto](https://beatrizmilz.github.io/2023-11-cebrap-lab-text-as-data/slides/intro-text-as-data.html)
+
 ### Scripts pós aula
 
 Em breve :)
