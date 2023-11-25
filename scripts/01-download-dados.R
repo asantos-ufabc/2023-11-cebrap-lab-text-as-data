@@ -1,0 +1,48 @@
+# Vamos usar os dados de enquetes da Câmara dos deputados
+# onde a população pode votar a favor ou contra determinado
+# projeto de lei, e deixar um comentário.
+
+# Dados abertos - Câmara dos deputados
+# https://dadosabertos.camara.leg.br/swagger/api.html
+
+# Carregando pacotes
+library(tidyverse)
+library(janitor)
+
+# Buscando dados de projetos de lei
+url_proposicoes_2023 <- "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2023.csv"
+
+proposicoes <- read_csv2(url_proposicoes_2023)
+
+projetos_de_lei <- proposicoes |> 
+  filter(descricaoTipo == "Projeto de Lei")
+
+# Para buscar os dados de enquete, podemos criar uma função simples:
+
+baixar_enquete <- function(id_enquete) {
+  url <- paste0(
+    "https://www.camara.leg.br/enquetes/posicionamentos/download/todos-posicionamentos?idEnquete=",
+    id_enquete,
+    "&exibicao=undefined&ordenacao=undefined"
+  )
+  dados <- read_csv(url, skip = 1) |>
+    clean_names() |>
+    mutate(id = id_enquete, .before = everything()) 
+  dados
+}
+
+# Vamos buscar a enquete mais votada nos últimos 6 meses!
+# https://www.camara.leg.br/enquetes/2373385
+
+
+
+# Altera o Decreto Lei nº 1.804, de 3 de setembro de 1980, 
+# para aumentar o valor de minimis na importação de USD 50,00 
+# para USD 100,00, reduzir a alíquota do imposto de importação 
+# de 60% para 20% e aumentar o valor máximo das remessas expressas 
+# de USD 3.000,00 para USD 5.000,00.
+
+
+resultados_enquete <- baixar_enquete("2373385")
+
+write_rds(resultados_enquete, "dados-brutos/resultados_enquete.rds")
