@@ -18,6 +18,27 @@ Para saber de próximos oferecimentos, entre em contato com
 
 - **Inscrições:** <https://cursos.cebrap.org.br/>
 
+## Pacotes para instalar
+
+- Para ser instalado via CRAN:
+
+``` r
+pacotes <-
+  c("tidyverse",
+    "tidytext",
+    "stopwords",
+    "wordcloud2",
+    "janitor",
+    "remotes")
+install.packages(pacotes)
+```
+
+- Para ser instalado via GitHub:
+
+``` r
+remotes::install_github("dfalbel/rslp")
+```
+
 ## Materiais
 
 ### Slides
