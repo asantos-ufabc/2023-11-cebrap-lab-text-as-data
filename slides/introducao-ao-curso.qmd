@@ -90,4 +90,6 @@ Imagem do livro [Text Mining with R](https://www.tidytextmining.com/tidytext#con
 
 -   Análise de agrupamentos com textos
 
+-   Importação
+
 ## Vamos começar? {.middle .center}

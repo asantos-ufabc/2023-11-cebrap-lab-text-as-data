@@ -29,7 +29,8 @@ pacotes <-
     "stopwords",
     "wordcloud2",
     "janitor",
-    "remotes")
+    "remotes",
+    "readtext")
 install.packages(pacotes)
 ```
 
