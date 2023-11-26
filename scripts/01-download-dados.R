@@ -33,14 +33,17 @@ baixar_enquete <- function(id_enquete) {
 
 # Vamos buscar a enquete mais votada nos últimos 6 meses!
 # https://www.camara.leg.br/enquetes/2373385
+# https://www.camara.leg.br/propostas-legislativas/2373385
 
-
-
+# Descrição:
 # Altera o Decreto Lei nº 1.804, de 3 de setembro de 1980, 
 # para aumentar o valor de minimis na importação de USD 50,00 
 # para USD 100,00, reduzir a alíquota do imposto de importação 
 # de 60% para 20% e aumentar o valor máximo das remessas expressas 
 # de USD 3.000,00 para USD 5.000,00.
+
+# Proposto por
+# Luiz Philippe de Orleans e Bragança (PL-SP) 
 
 
 resultados_enquete <- baixar_enquete("2373385")
