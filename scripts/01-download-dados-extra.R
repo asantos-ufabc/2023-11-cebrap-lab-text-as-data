@@ -50,4 +50,4 @@ resultados_tema <- resultados_tema_lista |>
   bind_rows()
 
 resultados_tema |> 
-  write_rds("dados-brutos/resultados_enquetes.rds")
+  write_rds("dados-brutos/resultados_enquetes-IA.rds")
