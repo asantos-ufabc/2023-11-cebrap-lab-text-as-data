@@ -82,5 +82,8 @@ Em breve :)
 - Principal referência do curso: [Text Mining with
   R](https://www.tidytextmining.com/) - Julia Silge and David Robinson
 
+- [Slides sobre o pacote
+  stringr](https://curso-r.github.io/202308-r4ds-2/materiais/slides/02_strings.html#1)
+
 - Referência mais avançada: [Livro Supervised Machine Learning for Text
   Analysis in R](https://smltar.com/) - Emil Hvitfeldt and Julia Silge
