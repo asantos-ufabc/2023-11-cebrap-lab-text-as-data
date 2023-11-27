@@ -2,34 +2,9 @@
 # onde a população pode votar a favor ou contra determinado
 # projeto de lei, e deixar um comentário.
 
-# Dados abertos - Câmara dos deputados
-# https://dadosabertos.camara.leg.br/swagger/api.html
-
 # Carregando pacotes
 library(tidyverse)
 library(janitor)
-
-# Buscando dados de projetos de lei
-url_proposicoes_2023 <- "https://dadosabertos.camara.leg.br/arquivos/proposicoes/csv/proposicoes-2023.csv"
-
-proposicoes <- read_csv2(url_proposicoes_2023)
-
-projetos_de_lei <- proposicoes |> 
-  filter(descricaoTipo == "Projeto de Lei")
-
-# Para buscar os dados de enquete, podemos criar uma função simples:
-
-baixar_enquete <- function(id_enquete) {
-  url <- paste0(
-    "https://www.camara.leg.br/enquetes/posicionamentos/download/todos-posicionamentos?idEnquete=",
-    id_enquete,
-    "&exibicao=undefined&ordenacao=undefined"
-  )
-  dados <- read_csv(url, skip = 1) |>
-    clean_names() |>
-    mutate(id = id_enquete, .before = everything()) 
-  dados
-}
 
 # Vamos buscar a enquete mais votada nos últimos 6 meses!
 # https://www.camara.leg.br/enquetes/2373385
@@ -45,7 +20,17 @@ baixar_enquete <- function(id_enquete) {
 # Proposto por
 # Luiz Philippe de Orleans e Bragança (PL-SP) 
 
+id_enquete <- "2373385"
 
-resultados_enquete <- baixar_enquete("2373385")
+url <- paste0(
+  "https://www.camara.leg.br/enquetes/posicionamentos/download/todos-posicionamentos?idEnquete=",
+  id_enquete,
+  "&exibicao=undefined&ordenacao=undefined"
+)
+
+resultados_enquete <- read_csv(url, skip = 1) |>
+  clean_names() |>
+  mutate(id = id_enquete, .before = everything())
+
 
 write_rds(resultados_enquete, "dados-brutos/resultados_enquete.rds")
