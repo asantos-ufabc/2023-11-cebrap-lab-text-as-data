@@ -19,33 +19,10 @@ tokens_bigram_separados <- tokens_bigram |>
 
 
 # Removendo stopwords ------------------------
+# Carregando as stopwords em português
+source("scripts/stop-words.R")
 
-snowball <- stopwords(source = "snowball", language = "pt")
-extra_stop_words <- c("é",
-                      "ser",
-                      "pra",
-                      "vai",
-                      "portanto",
-                      "quer",
-                      "querer",
-                      "quase",
-                      "pois",
-                      "algo",
-                      "assim",
-                      "ai",
-                      "ainda",
-                      "algum",
-                      "sendo",
-                      "existe",
-                      "disso",
-                      "deveria",
-                      "deveriam",
-                      "disso"
-                      )
-
-stop_words_completo <- c(snowball, extra_stop_words)
-
-
+# Removendo stopwords e números
 tokens_sem_stopwords <- tokens_bigram_separados |> 
   filter(!palavra1 %in% stop_words_completo) |> 
   filter(!palavra2 %in% stop_words_completo) |> 
@@ -56,11 +33,13 @@ tokens_sem_stopwords |>
 
 # Visualizando o tf-idf ------------------------
 
+# Calculando o tf-idf por posicionamento
 tf_idf <- tokens_sem_stopwords |> 
   count(bigram, posicionamento, sort = TRUE)   |> 
   bind_tf_idf(bigram, posicionamento, n) |> 
   arrange(desc(tf_idf))
 
+# Visualizando os resultados
 tf_idf |>
   group_by(posicionamento) |> 
   slice_max(tf_idf, n = 10, with_ties = FALSE) |> 

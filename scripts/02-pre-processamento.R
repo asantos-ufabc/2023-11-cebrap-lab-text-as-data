@@ -6,7 +6,6 @@ library(stopwords)
 library(rslp)
 
 
-
 # importando os dados
 resultados_enquete_raw <- read_rds("dados-brutos/resultados_enquete.rds")
 
@@ -43,7 +42,7 @@ resultados_enquete |>
   aes(x = data, y = n) +
   geom_line(aes(color = posicionamento)) 
 
-# Vamos começar a explorar o texto dos comentários
+# Vamos começar a explorar o texto dos comentários ---------------------------
 
 # Vamos usar o pacote tidytext para fazer a tokenização
 tokens_enquete <- resultados_enquete  |> 
@@ -59,27 +58,15 @@ tokens_enquete |>
 
 # Removendo stopwords ------------------------
 
-# stopwords::stopwords_getsources()
+# Ir para arquivo : scripts/stop-words.R
 
-# stopwords::stopwords_getlanguages("snowball")
+source("scripts/stop-words.R")
 
-# Sources que tem pt: "snowball", "stopwords-iso", "nltk"
- 
-
-stopwords_pt_snowball <-
-  stopwords(source = "snowball", language = "pt") |> 
-  enframe(value = "palavra", name = NULL)
-
-# stopwords_pt_iso <-
-#   stopwords::stopwords(source = "stopwords-iso", language = "pt")
-# 
-# stopwords_pt_nltk <-
-#   stopwords::stopwords(source = "nltk", language = "pt")
-
-# Vamos usar o snowball
 
 tokens_sem_stopwords <- tokens_enquete |> 
-  anti_join(stopwords_pt_snowball, by = c("palavra"))
+  filter(!palavra %in% stop_words_completo) |> 
+  # Removendo números
+  filter(!str_detect(palavra, "[0-9]"))
 
 # Palavras mais frequentes sem stopwords
 
@@ -87,35 +74,12 @@ tokens_sem_stopwords |>
   count(palavra, sort = TRUE) 
 
 # Problemas:
-# - algumas palavras não estão na lista de stopwords,
-# mas não são relevantes para a análise
-
-# Vamos remover algumas palavras que não são relevantes
-extra_stop_words <- tibble(palavra = c("é", "ser", "pra", "vai",
-                                       "portanto"))
-
-tokens_sem_stopwords_2 <- tokens_sem_stopwords |> 
-  anti_join(extra_stop_words, by = c("palavra"))
-
-tokens_sem_stopwords_2 |>
-  count(palavra, sort = TRUE)
-
-# Problemas ---
-# Correções manuais.
-# ex: número 0 aparece como 0 e zero, e aparece muitas vezes!
-
-tokens_arrumados <- tokens_sem_stopwords_2 |> 
-  mutate(palavra_arrumada = case_when(
-    palavra == "0" ~ "zero",
-    TRUE ~ palavra
-  ))
-
-
-# Problemas:
 # - palavras com a mesma raiz são contadas separadamente
 # ex: "votar", "votou", "votando", "votaram"
 # - palavras singular/plural são contadas separadamente
 # ex: imposto, impostos
+
+# Erros de português
 
 # Stemming ------------------------
 
