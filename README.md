@@ -30,7 +30,8 @@ pacotes <-
     "wordcloud2",
     "janitor",
     "remotes",
-    "readtext")
+    "readtext",
+    "fs")
 install.packages(pacotes)
 ```
 
