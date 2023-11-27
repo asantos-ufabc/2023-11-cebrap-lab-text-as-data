@@ -55,14 +55,7 @@ date: 'Novembro de 2023'
     -   [R](https://cran.r-project.org/bin/windows/base/)
     -   [RStudio](https://rstudio.com/products/rstudio/download/)
 
--   Instalar pacotes:
-
-```{r, eval=FALSE, echo = TRUE}
-install.packages(c(
-  "tidyverse",
-  "tidytext"
-))
-```
+-   Instalar pacotes: listados no README
 
 ## Ciclo da Ciência de Dados
 
