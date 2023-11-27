@@ -104,6 +104,9 @@ tokens_stem <- tokens_arrumados |>
 tokens_stem |> 
   count(stem, sort = TRUE) 
 
+fs::dir_create("dados")
+
+
 # Agora sim!
 tokens_stem |> 
   write_rds("dados/tokens_preparados.rds")

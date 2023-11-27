@@ -49,5 +49,9 @@ resultados_tema_lista <- map(projetos_tema$id, baixar_enquete)
 resultados_tema <- resultados_tema_lista |> 
   bind_rows()
 
+
+fs::dir_create("dados-brutos")
+
+
 resultados_tema |> 
   write_rds("dados-brutos/resultados_enquetes-IA.rds")

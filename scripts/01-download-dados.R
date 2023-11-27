@@ -36,5 +36,7 @@ resultados_enquete <- read_csv(url, skip = 1) |>
   clean_names() |>
   mutate(id = id_enquete, .before = everything())
 
+fs::dir_create("dados-brutos")
+
 # Salvando os dados
 write_rds(resultados_enquete, "dados-brutos/resultados_enquete.rds")
