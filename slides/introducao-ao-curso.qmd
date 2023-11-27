@@ -88,8 +88,8 @@ Imagem do livro [Text Mining with R](https://www.tidytextmining.com/tidytext#con
 
 -   Análise Descritiva / Visualização
 
--   Análise de agrupamentos com textos
+-   N-grams e tf-idf
 
--   Importação
+-   Importação (mais avançada)
 
 ## Vamos começar? {.middle .center}
