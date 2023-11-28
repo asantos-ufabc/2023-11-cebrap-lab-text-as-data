@@ -1,5 +1,8 @@
 ---
-output: github_document
+output: 
+  github_document:
+    toc: true
+
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -47,7 +50,7 @@ install.packages(pacotes)
 - Para ser instalado via GitHub:
 
 ```{r, eval = FALSE}
-remotes::install_github("dfalbel/rslp")
+remotes::install_github("dfalbel/ptstem")
 ```
 
 

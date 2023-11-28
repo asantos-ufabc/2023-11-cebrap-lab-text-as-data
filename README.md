@@ -1,4 +1,16 @@
 
+- [cebrap.lab online - Análise quantitativa de
+  texto](#cebraplab-online---análise-quantitativa-de-texto)
+  - [Informações gerais](#informações-gerais)
+  - [Pacotes para instalar](#pacotes-para-instalar)
+  - [Materiais](#materiais)
+    - [Slides](#slides)
+    - [Scripts pós aula](#scripts-pós-aula)
+    - [Exercícios](#exercícios)
+  - [Materiais para revisão do conteúdo
+    básico](#materiais-para-revisão-do-conteúdo-básico)
+  - [Materiais para ir além](#materiais-para-ir-além)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # cebrap.lab online - Análise quantitativa de texto
@@ -38,7 +50,7 @@ install.packages(pacotes)
 - Para ser instalado via GitHub:
 
 ``` r
-remotes::install_github("dfalbel/rslp")
+remotes::install_github("dfalbel/ptstem")
 ```
 
 ## Materiais
