@@ -2,8 +2,8 @@
 library(tidyverse)
 library(tidytext)
 library(stopwords)
-# devtools::install_github("dfalbel/rslp")
-library(rslp)
+# devtools::install_github("dfalbel/ptstem")
+library(ptstem)
 
 
 # importando os dados
