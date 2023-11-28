@@ -128,3 +128,9 @@ Em breve
 
 - Referência mais avançada: [Livro Supervised Machine Learning for Text
   Analysis in R](https://smltar.com/) - Emil Hvitfeldt and Julia Silge
+
+- [Capítulo sobre strings -
+  R4DS](https://cienciadedatos.github.io/pt-r4ds/strings.html)
+
+- [Capítulo sobre expressões regulares -
+  R4DS](https://cienciadedatos.github.io/pt-r4ds/regexps.html)
