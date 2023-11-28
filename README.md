@@ -93,7 +93,7 @@ Em breve
 
 #### Terça-feira
 
-Em breve
+- [exercicio-1](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/exercicios/exercicio-1.md)
 
 #### Quinta-feira
 
