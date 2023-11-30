@@ -83,7 +83,12 @@ remotes::install_github("dfalbel/ptstem")
 
 #### Quarta-feira
 
-Em breve
+- [03-descritiva-visualizacao.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/03-descritiva-visualizacao.R) -
+  buscando palavras mais frequentes por grupo, visualização com
+  wordcloud, visualização com gráfico de barras.
+
+- [04-ngrams.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/04-ngrams.R) -
+  bigramas, visualização com gráfico de barras.
 
 #### Sexta-feira
 
@@ -94,6 +99,9 @@ Em breve
 #### Terça-feira
 
 - [exercicio-1](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/exercicios/exercicio-1.md)
+
+- [exercicio-1 - com
+  respostas](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/exercicios/exercicio-1-respondido.md)
 
 #### Quinta-feira
 
