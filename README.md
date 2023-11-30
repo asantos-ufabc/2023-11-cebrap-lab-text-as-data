@@ -105,7 +105,7 @@ Em breve
 
 #### Quinta-feira
 
-Em breve
+- [exercicio-2](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/exercicios/exercicio-2.md)
 
 ## Materiais para revisão do conteúdo básico
 
