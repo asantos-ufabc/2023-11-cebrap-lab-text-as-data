@@ -1,0 +1,44 @@
+---
+title: "Untitled"
+format: revealjs
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| warning: false
+library(wordcloud2)
+library(tidyverse)
+library(wordcloud2)
+
+tokens <- read_rds("../dados/tokens_preparados.rds")
+
+stems_por_posicionamento <- tokens |>
+  group_by(stem, posicionamento) |>
+  summarise(freq = n(),
+            soma_curtidas = sum(qtd_curtidas)) |> 
+  ungroup() |> 
+  rename(word = stem) 
+```
+
+...
+
+## Posicionamento: positivo
+
+```{r}
+#| echo: false
+stems_por_posicionamento |>
+  filter(posicionamento == "positivo") |> 
+  select(-posicionamento) |> 
+  wordcloud2()
+```
+
+## Posicionamento: negativo
+
+```{r}
+stems_por_posicionamento |>
+  filter(posicionamento == "negativo") |> 
+  select(-posicionamento) |> 
+  wordcloud2()
+```
+

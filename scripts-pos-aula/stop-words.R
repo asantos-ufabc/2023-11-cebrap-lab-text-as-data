@@ -1,3 +1,10 @@
+rm_accent <- function(x){
+    stringi::stri_trans_general(x, "Latin-ASCII")
+}
+
+# abjutils::rm_accent()
+
+
 # Sources que tem pt: "snowball", "stopwords-iso", "nltk"
 
 # Quais são as fontes de conjuntos de stop words disponíveis
