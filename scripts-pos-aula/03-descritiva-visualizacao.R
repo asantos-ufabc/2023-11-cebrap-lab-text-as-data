@@ -46,7 +46,7 @@ mais_frequentes_filtrado <- mais_frequentes_positivo |>
 mais_frequentes_filtrado |> 
   mutate(posicionamento = str_to_title(posicionamento),
          stem = str_to_title(stem),
-         stem = tidytext::reorder_within(stem, n, within = posicionamento, sep = " - ")) |> 
+         stem = tidytext::reorder_within(stem, n, within = posicionamento)) |> 
   ggplot() +
   geom_col(aes(x = n, y = stem, fill = posicionamento), show.legend = FALSE ) +
   facet_wrap(~posicionamento, scales = "free") +
@@ -55,8 +55,8 @@ mais_frequentes_filtrado |>
   labs(
     x = "Frequencia de ocorrência",
     y = "Stem"
-  )
-  
+  ) +
+  tidytext::scale_y_reordered() # Usar essa função para não ficar com o nome do grupo duplicado
 
 # Gráfico
 # mais_frequentes |>

@@ -59,27 +59,44 @@ tokens_sem_stopwords |>
   )
   
 
-
-
-
-
-
 # Sexta-feira
 # Visualizando o tf-idf ------------------------
+# https://www.tidytextmining.com/tfidf
+
+# tf = term frequency - frequência que o termo aparece no documento
+# termo nesse caso seria o token!
+# idf = inverse document frequency - frequência inversa do documento
+
+
+# Existem palavras que aparecem bastante mas não são relevantes
+# o idf diminui o peso dessas palavras,
+# e aumenta o peso das palavras que aparecem pouco em um conjunto de texto.
+
+
+# tf-idf - frequencia do termo, ajusta a quao "rara" é utilizada
+
+# tf-idf = o objetivo é medir o quão importante é uma palavra 
+# para um documento em um conjunto de documentos
+
 
 # Calculando o tf-idf por posicionamento
 tf_idf <- tokens_sem_stopwords |> 
+  # contagem de ocorrencia do bigrama pelo posicionamento
   count(bigram, posicionamento, sort = TRUE) |> 
+  # calculando o tf-idf e adicionando as colunas na base
   bind_tf_idf(bigram, posicionamento, n) |> 
+  # ordenando de forma decrescente
   arrange(desc(tf_idf))
 
 # Visualizando os resultados
 tf_idf |>
-  group_by(posicionamento) |> 
-  slice_max(tf_idf, n = 10, with_ties = FALSE) |> 
+  group_by(posicionamento) |>
+  # considerando que ja ta ordenado
+  # slice(1:10)
+  slice_max(tf_idf, n = 10, with_ties = FALSE) |>
   mutate(bigram = reorder(bigram, tf_idf)) |>
   ggplot() +
   aes(x = tf_idf, y = bigram) +
   geom_col() +
-  facet_wrap(~posicionamento, scales = "free")
+  facet_wrap( ~ posicionamento, scales = "free")
   
