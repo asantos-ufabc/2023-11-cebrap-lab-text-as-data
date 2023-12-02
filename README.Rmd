@@ -82,11 +82,13 @@ remotes::install_github("dfalbel/ptstem")
 
 - [03-descritiva-visualizacao.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/03-descritiva-visualizacao.R) - buscando palavras mais frequentes por grupo, visualização com wordcloud, visualização com gráfico de barras.
 
-- [04-ngrams.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/04-ngrams.R) - bigramas, visualização com gráfico de barras.
+- [04-ngrams.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/04-ngrams.R) - bigramas, visualização com gráfico de barras, tf-idf.
 
 #### Sexta-feira
 
-Em breve
+- [05-importacao.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/05-importacao.R) - importação de arquivos (exemplo com PDFs).
+
+- [06-modelagem-topicos.R](https://github.com/beatrizmilz/2023-11-cebrap-lab-text-as-data/blob/main/scripts-pos-aula/06-modelagem-topicos.R) - modelagem de tópicos (LDA).
 
 ### Exercícios
 
